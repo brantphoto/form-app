@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Webpack & Angular</title>
+  </head>
+  <body>
+    <section ng-controller="formAppCtrl as fc">
+      <form name="myForm" ng-submit="fc.submit(myForm)" novalidate>
+
+        <label>
+          email address
+          <input name="email" ng-model="fc.user.email" ng-model-options="{updateOn: 'blur'}" type="email"/>
+        </label>
+        <div ng-messages="myForm.email.$error" style="color:maroon" role="alert">
+          <div ng-message="email">Not a valid email</div>
+        </div>
+
+        <label>
+          First Name
+          <input name="firstName" ng-model="fc.user.firstName" required />
+        </label>
+        <div ng-messages="myForm.firstName.$touched && myForm.firstName.$error" style="color:maroon" role="alert">
+          <div ng-message="required">First Name Required</div>
+        </div>
+
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+    </section>
+    <script src="bundle.js"></script>
+  </body>
+</html>

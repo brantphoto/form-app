@@ -1,0 +1,21 @@
+{
+  "name": "angularwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "webpack-dev-server --hot --inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-messages": "^1.4.7",
+    "angular-sanitize": "^1.4.7"
+  }
+}
