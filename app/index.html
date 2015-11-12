@@ -5,7 +5,7 @@
     <title>Webpack & Angular</title>
   </head>
   <body>
-    <section ng-controller="formAppCtrl as fc">
+    <section ng-controller="formAppCtrl as fc" class="form-container">
       <form name="myForm" ng-submit="fc.submit(myForm)" novalidate>
 
         <label>
@@ -22,6 +22,13 @@
         </label>
         <div ng-messages="myForm.firstName.$touched && myForm.firstName.$error" style="color:maroon" role="alert">
           <div ng-message="required">First Name Required</div>
+        </div>
+        <label>
+          Last Name
+          <input name="lastName" ng-model="fc.user.lastName" required />
+        </label>
+        <div ng-messages="myForm.lastName.$touched && myForm.lastName.$error" style="color:maroon" role="alert">
+          <div ng-message="required">Last Name Required</div>
         </div>
 
         <button type="submit">

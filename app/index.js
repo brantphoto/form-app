@@ -1,4 +1,5 @@
 require('angular');
+require("!style!css!less!./main.less");
 
 angular
 .module(require('./app.settings').appNameString, [require('angular-messages'), require('angular-sanitize')])
