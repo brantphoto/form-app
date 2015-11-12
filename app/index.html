@@ -6,10 +6,13 @@
   </head>
   <body>
     <section ng-controller="formAppCtrl as fc" class="form-container">
+      <h1>SIGN UP</h1>
       <form name="myForm" ng-submit="fc.submit(myForm)" novalidate>
 
         <label>
-          email address
+          <span>
+            email address
+          </span>
           <input name="email" ng-model="fc.user.email" ng-model-options="{updateOn: 'blur'}" type="email"/>
         </label>
         <div ng-messages="myForm.email.$error" style="color:maroon" role="alert">
@@ -17,14 +20,18 @@
         </div>
 
         <label>
-          First Name
+          <span>
+            First Name
+          </span>
           <input name="firstName" ng-model="fc.user.firstName" required />
         </label>
         <div ng-messages="myForm.firstName.$touched && myForm.firstName.$error" style="color:maroon" role="alert">
           <div ng-message="required">First Name Required</div>
         </div>
         <label>
-          Last Name
+          <span>
+            Last Name
+          </span>
           <input name="lastName" ng-model="fc.user.lastName" required />
         </label>
         <div ng-messages="myForm.lastName.$touched && myForm.lastName.$error" style="color:maroon" role="alert">
